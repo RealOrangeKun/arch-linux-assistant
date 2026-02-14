@@ -48,6 +48,8 @@ docker exec -it arch-assistant-ollama ollama pull llama3.2
 **🔐 Test Account (for judges)**
 - Email: `judge@devto.com`
 - Password: `ArchyDemo2024!`
+- *Automatically created on first startup via database seed script*
+- Includes sample chat demonstrating the memory feature
 
 ### Screenshots
 

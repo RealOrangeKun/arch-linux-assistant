@@ -28,6 +28,13 @@ from auth import (
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Arch Linux Assistant API")
+
+# Seed database on startup
+@app.on_event("startup")
+async def startup_event():
+    """Seed database with test user on application startup."""
+    from seed_database import seed_database
+    await seed_database()
 security = HTTPBearer()
 arch_service = ArchPackageService()
 
